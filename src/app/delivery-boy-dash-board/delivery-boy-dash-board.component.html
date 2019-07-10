@@ -1,0 +1,202 @@
+
+<div class="w3-bar" style="margin-bottom:80px;"></div>
+<div class="w3-container w3-padding-16">
+  <h5 class="w3-black w3-padding">Profile Details:</h5>
+  <div class="w3-border" style="margin-top: -10px">
+    <div class="row">
+      <div class="col-md-4 w3-center w3-padding ">
+        <img src="../../assets/img/profile.png" width="50%" />
+      </div>
+
+    
+      <div class="col-md-8">
+        <table class="table table-striped">
+          <tr>
+            <th>Name</th>
+            <td>{{deliveryBoy.deliveryBoyName}}</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>{{deliveryBoy.email}}</td>
+          </tr>
+          <tr>
+            <th>Mobile</th>
+            <td>{{deliveryBoy.mobile}}</td>
+          </tr>
+          <tr>
+            <th>Vechile Type</th>
+            <td>Bike</td>
+          </tr>
+          <tr>
+            <th>Vechile Reg No.</th>
+            <td>KA-MG-0143</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w3-bar">
+  <div class="w3-bar-item w3-center">
+    <button style="margin-right: 20px;" data-toggle="modal" href="#routeModal" routerLink="/RouteMap" class="btn btn-primary btn-md">Route</button>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-16">
+  <h5 class="w3-black w3-padding">Delivery Log:</h5>
+  <div class="w3-card-4 w3-padding " style="margin-top: -10px" >
+    <div class="w3-container w3-padding w3-border" style="margin: 10px" *ngFor="let log of deliveryBoyLogs.logs">
+      <!-- Single Assignment Log -->
+      <div class="row" *ngFor="let restaurant of log.restaurants">
+        <div class="col-md-3">
+            <label>Restaurant Name</label>
+            <br />
+          {{restaurant.restaurantName}}
+          <br />
+          <label>Pick Up Location</label>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15556.723977937096!2d77.6145751!3d12.8960805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2647c13c1c5377de!2sDeccan+Expressions!5e0!3m2!1sen!2sin!4v1561914237147!5m2!1sen!2sin"
+            width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-3">
+          <label>Order Details</label>
+          <table class="table">
+            <tr>
+              <th>Quantity</th>
+              <td>{{restaurant.foodAvailability}}</td>
+            </tr>
+            <tr>
+              <th>Veg</th>
+              <td>{{restaurant.foodAvailability/2}}</td>
+            </tr>
+            <tr>
+              <th>Non-Veg</th>
+              <td>{{restaurant.foodAvailability/2}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-3 w3-padding">
+          <div class="row">
+            <div class="col-md-12">
+              <button class="w3-btn w3-orange w3-small w3-round">Recived</button>
+              &nbsp;
+              <button class="w3-btn w3-blue w3-small w3-round">Picked</button>
+              &nbsp;
+              <button class="w3-btn w3-teal w3-small w3-round">Delivered</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Of Assignment Log -->
+  
+      <!-- Single Assignment Log -->
+      <div class="row" *ngFor="let charity of log.charities">
+        <!-- <div class="col-md-3"> -->
+          <!-- <label>Pick Up Address</label>
+          <br />
+          #11/1A 2nd A main 2nd Cross Kodichikkanahalli 4th stage, BTM 2nd Stage, Bengaluru, Karnataka 560076
+          <br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15556.723977937096!2d77.6145751!3d12.8960805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2647c13c1c5377de!2sDeccan+Expressions!5e0!3m2!1sen!2sin!4v1561914237147!5m2!1sen!2sin"
+            width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div> -->
+        <div class="col-md-3">
+          <label>Charity Name</label>
+          <br />
+          {{charity.charityName}}
+          <br />
+          <label>Delivery Location</label>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15556.723977937096!2d77.6145751!3d12.8960805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2647c13c1c5377de!2sDeccan+Expressions!5e0!3m2!1sen!2sin!4v1561914237147!5m2!1sen!2sin"
+            width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-3">
+          <label>Order Details</label>
+          <table class="table">
+            <tr>
+              <th>Quantity</th>
+              <td>{{charity.foodReceived}}</td>
+            </tr>
+            <tr>
+              <th>Veg</th>
+              <td>{{charity.foodReceived}}</td>
+            </tr>
+            <tr>
+              <th>Non-Veg</th>
+              <td>{{charity.foodReceived}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-3 w3-padding">
+          <div class="row">
+            <div class="col-md-12">
+              <button class="w3-btn w3-orange w3-small w3-round">Recived</button>
+              &nbsp;
+              <button class="w3-btn w3-blue w3-small w3-round">Picked</button>
+              &nbsp;
+              <button class="w3-btn w3-teal w3-small w3-round">Delivered</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Of Assignment Log -->
+  </div>
+</div>
+
+<!-- {{deliveryBoy.deliveryBoyName}}
+
+<div class="modal fade" id="routeModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+  
+      <div class="modal-header">
+        <h3 class="modal-title">Route</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      
+      <div class="modal-body">
+        <h3>Restaurants</h3>
+    <table class="table table-striped">
+      <tbody>
+        <tr *ngFor="let restaurant of deliveryRoute.logs.restaurants">
+        <td>Restaurant Name</td>
+        <td>{{restaurant.restaurantName}}</td>
+        <td>Location</td>
+        <td>{{restaurant.location}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Charities</h3>
+    <table class="table table-striped">
+      <tbody>
+        <tr *ngFor="let charity of deliveryRoute.logs.charities">
+        <td>Charity Name</td>
+        <td>{{charity.charityName}}</td>
+        <td>Charity Location</td>
+        <td>{{charity.location}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+      </div>
+      
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+ -->

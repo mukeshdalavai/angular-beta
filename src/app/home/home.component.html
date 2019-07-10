@@ -1,0 +1,184 @@
+<!-- Header Image -->
+ <div style="width: 100%">
+  <!-- <img src="assets/img/children.jpg" style="opacity: 1;min-height: 300px" width="100%"> -->
+
+
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1 class="p-5">You can Make a Difference, So Why don't you?</h1>
+      <div class="title-button p-2">
+      <button routerLink="/SignUp" class="btn btn-dark btn-lg" style="width: 250px;"><img src="assets/img/donate.png"
+        width="40px" height="40px" /> Want To Donate?</button>
+        
+    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#wantFoodModal" style="width: 250px;"><img
+        src="assets/img/want.png" width="40px" height="40px" /> Want Food?</button>    
+        </div>
+      </div>
+  </div>
+  </div>
+
+  <!-- Resurant Slide Show For Home -->
+<app-restaurant-slider></app-restaurant-slider>
+<!-- End Of Resurant Slide Show For Home -->
+
+<!-- Charity Slider -->
+<app-charity-slider></app-charity-slider>
+<!-- End Of Charity Slider-->
+
+
+<!-- Want Food modal -->
+<div class="modal fade" id="wantFoodModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Want Food?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+          <label>Name</label>
+          <input type="text" name="" class="form-control"><br>
+          <label>Address</label><br>
+          <textarea rows="3" cols="50" class="form-control"></textarea><br>
+          <label>Mobile</label>
+          <input type="number" name="" class="form-control"><br>
+          <label>Requirement</label>
+          <div class="form-inline">
+            <input type="number" placeholder="Veg" style="width: 45%;" name="" class="form-control">
+            <input type="number" placeholder="Non-Veg" style="width: 45%;margin-left: 20px;" name=""
+              class="form-control">
+          </div><br><br>
+          <button class="btn btn-dark w3-wide" style="width: 30%;">SUBMIT</button>
+          &nbsp;&nbsp;
+          <a routerLink="/FoodStatus" class="close" data-dismiss="modal">Food Status</a>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="bg-dark" style="padding: 18px;">
+        <label class="text-white">&copy; Copyright Reserved Wastage Reduction</label>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Donate Food -->
+<div class="modal fade" id="donateFoodModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Donate Food?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="bg-dark" style="padding: 18px;">
+        <label class="text-white">&copy; Copyright Reserved Wastage Reduction</label>
+      </div>
+
+    </div>
+  </div>
+</div>
+<hr/>
+<h1 class="text-dark  text-center">About Us</h1><br>
+<div class="container p5">
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere felis nunc, ut consectetur mi interdum non.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse elementum at
+    est sed suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at mollis velit, sed imperdiet
+    lectus. Cras congue malesuada nibh vel sollicitudin. Suspendisse potenti. Morbi leo justo, ultricies sed arcu vel,
+    tempor condimentum lectus. Ut feugiat tempus suscipit.
+
+    Mauris fringilla dolor eget est venenatis egestas. Pellentesque porta justo id tristique varius. Nulla a magna
+    ornare, vestibulum ipsum a, pharetra erat. Integer eu sem viverra, lobortis purus at, auctor purus. Cras nec ipsum
+    condimentum leo dictum facilisis et at erat. Proin vulputate, sapien ut interdum elementum, est elit lacinia purus,
+    at porttitor nisl sapien at dui. In neque dui, mattis nec finibus ut, interdum quis ipsum. Donec quis justo est.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere felis nunc, ut consectetur mi interdum non.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse elementum at
+    est sed suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at mollis velit, sed imperdiet
+    lectus. Cras congue malesuada nibh vel sollicitudin. Suspendisse potenti. Morbi leo justo, ultricies sed arcu vel,
+    tempor condimentum lectus. Ut feugiat tempus suscipit.
+
+    Mauris fringilla dolor eget est venenatis egestas. Pellentesque porta justo id tristique varius. Nulla a magna
+    ornare, vestibulum ipsum a, pharetra erat. Integer eu sem viverra, lobortis purus at, auctor purus. Cras nec ipsum
+    condimentum leo dictum facilisis et at erat. Proin vulputate, sapien ut interdum elementum, est elit lacinia purus,
+    at porttitor nisl sapien at dui. In neque dui, mattis nec finibus ut, interdum quis ipsum. Donec quis justo est.
+  </p>
+
+</div>
+
+<hr/>
+<h1 class="text-dark  text-center ">Our Teams</h1><br>
+<div class="container p-5">
+
+  <div class="row p-2 bg-light-gray">
+    <div class="col-md-6">
+      <h4>Ashutosh Khamari</h4>
+      <label>ashutosh.khamari@mg.com</label>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.</p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="../../assets/img/ashuu.png" height="150" width="150" class="rounded-circle" />
+    </div>
+  </div>
+
+  <div class="row p-2">
+    <div class="col-md-6 text-center">
+      <img src="../../assets/img/ashuu.png" height="150" width="150" class="rounded-circle" />
+    </div>
+    <div class="col-md-6">
+      <h4>Ashutosh Khamari</h4>
+      <label>ashutosh.khamari@mg.com</label>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.</p>
+    </div>
+  </div>
+
+  <div class="row p-2 bg-light-gray">
+      <div class="col-md-6">
+        <h4>Ashutosh Khamari</h4>
+        <label>ashutosh.khamari@mg.com</label>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+          a type specimen book.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="../../assets/img/ashuu.png" height="150" width="150" class="rounded-circle" />
+      </div>
+    </div>
+  
+    <div class="row p-2">
+      <div class="col-md-6 text-center">
+        <img src="../../assets/img/ashuu.png" height="150" width="150" class="rounded-circle" />
+      </div>
+      <div class="col-md-6">
+        <h4>Ashutosh Khamari</h4>
+        <label>ashutosh.khamari@mg.com</label>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+          a type specimen book.</p>
+      </div>
+    </div>
+
+
+
+</div>

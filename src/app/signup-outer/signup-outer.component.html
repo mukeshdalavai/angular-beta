@@ -1,0 +1,26 @@
+<div class="container p-5 ">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 border bgOpacity">
+
+      <!-- <div class="text-center"> -->
+          <h3 class="text-center pt-3 pb-0">SIGNUP</h3>
+      <!-- </div> -->
+      
+      <div class="form-check">
+        <label class="form-check-label" for="radio1">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="restaurant" [(ngModel)]="role">Restaurant
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="charity" [(ngModel)]="role">Charity
+        </label>
+      </div>
+
+      <app-sign-up (clickEvent)="signup($event)"></app-sign-up>
+
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

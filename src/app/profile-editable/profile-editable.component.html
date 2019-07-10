@@ -1,0 +1,167 @@
+<div class="container">
+  <h1>Profile</h1>
+  <hr>
+ 
+<div class="row">
+    
+    <!-- left column -->
+    <div class="col-md-3">
+      <div *ngIf="editable=='false'" class="text-center">
+          <img contenteditable="false" id="profile" src="//placehold.it/250" alt="your image" width="250px" height="250px" />
+        <div class="form-control">
+            <input type="file"
+            onchange="document.getElementById('profile').src = window.URL.createObjectURL(this.files[0])">
+          <!-- <button (click)="onUpload()">Upload</button> -->
+        </div>
+      </div>
+      <div *ngIf="editable=='true'" class="text-center">
+          <img data-type="editable" id="profile" src="//placehold.it/250" alt="your image" width="250px" height="250px" />
+        <div class="form-control">
+          <input type="file"
+              onchange="document.getElementById('profile').src = window.URL.createObjectURL(this.files[0])">
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- edit form column -->
+    <div *ngIf="editable=='false'" class="col-md-9 personal-info">
+      <div class="alert alert-info alert-dismissable">
+        <a class="panel-close close" data-dismiss="alert">×</a> 
+        <i class="fa fa-check-circle"></i>
+        This profile is <strong>100%</strong> complete.
+      </div>
+    
+       
+   
+      <form class="form-horizontal" >
+              
+      
+        <div class="form-control">
+           
+            <!-- <div id="myProgress" >
+                <div id="myBar" class="progress-bar" role="progressbar" >
+                  <div aria-valuenow="19"></div>
+                </div> -->
+                <div class="w3-bar">
+                  <div class="w3-bar-item w3-right">
+                    <img name="pencil" class="pencil"   (click)="edit()" src="../../assets/img/pen.png" height="30px" />
+                  </div>
+                  </div>
+        <div class="form-group">
+           
+              
+          <label class="col-lg-3 control-label">Name:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="false" id="textarea">Jane</p>
+          </div>
+        <div class="form-group">        
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="false" id="textarea">jane@gmail.com</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Mobile No:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="false" id="textarea">78978788787</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Address:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="false" id="textarea">Karnataka</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Location:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="false" id="textarea">Bangalore</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Username:</label>
+          <div class="col-md-8">
+              <p class="p-2" contenteditable="false" id="textarea">janeuser</p>
+          </div>
+        </div>
+       
+        <div class="form-group">
+          <label class="col-md-3 control-label">Certificate No:</label>
+          <div class="col-md-8" >
+            <p class="p-2" contenteditable="false" id="textarea">644666</p>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+        
+      </form>
+    </div>
+      
+    <div *ngIf="editable=='true'" class="col-md-9 personal-info">
+      <div class="alert alert-info alert-dismissable">
+        <a class="panel-close close" data-dismiss="alert">×</a> 
+        <i class="fa fa-check-circle"></i>
+        This profile is <strong>100%</strong> complete.
+      </div>
+      
+      <form class="form-horizontal" >
+        <div class="form-control">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Name:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="true" id="textarea">Jane</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="true" id="textarea">jane@gmail.com</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Mobile No:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="true" id="textarea">78978788787</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Address:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="true" id="textarea">Karnataka</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Location:</label>
+          <div class="col-lg-8">
+              <p class="p-2" contenteditable="true" id="textarea">Bangalore</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Username:</label>
+          <div class="col-md-8">
+              <p class="p-2" contenteditable="true" id="textarea">janeuser</p>
+          </div>
+        </div>
+       
+        <div class="form-group">
+          <label class="col-md-3 control-label">Certificate No:</label>
+          <div class="col-md-8" >
+            <p class="p-2" contenteditable="true" id="textarea">644666</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <input type="button" class="btn btn-primary" value="Save Changes" (click)="edit()">
+            <span>  </span>
+            <input type="reset" class="btn btn-default" value="Cancel" (click)="edit()">
+          </div>
+          </div>
+        </div>
+      </form>
+    </div> 
+</div>
+</div>
+<hr>
