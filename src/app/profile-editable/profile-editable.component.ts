@@ -16,7 +16,7 @@ selectedFile: File
   username : string;
   restaurant : any;
   charity : any;
-  deliveryboy : any;
+  deliveryBoy : any;
 
   constructor(private service : DonationService) { }
 
@@ -39,7 +39,8 @@ selectedFile: File
     if(this.role=='deliveryBoy'){
         this.service.fetchDeliveryBoyProfile(this.username).subscribe(data => {
         console.log(data)
-        this.deliveryboy = data;
+        this.deliveryBoy = data;
+        console.log(this.deliveryBoy);
     })
 }
   }
@@ -79,7 +80,7 @@ selectedFile: File
     console.log(deliveryBoy)
     this.service.updateDeliveryboyProfile(deliveryBoy).subscribe((data)=>{
       console.log(data);
-      this.deliveryboy=data;
+      this.deliveryBoy=data;
     })
   }
 }

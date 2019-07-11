@@ -20,6 +20,7 @@ export class CharityDashBoardComponent implements OnInit {
     foodStatus : any;
     charityLogs : any[];
     abcd : any;
+    locationstring:string;
 
     
 
@@ -33,8 +34,11 @@ export class CharityDashBoardComponent implements OnInit {
         this.charity=data;
         console.log("bashir ");
         console.log(this.charity);
-        console.log(" chutiya");
-      });
+        this.locationstring = this.charity.location;
+        console.log(this.locationstring);   
+         });
+
+      
     
     this.service.fetchCharityLogs(this.username).subscribe(data=>{
       console.log(data)
