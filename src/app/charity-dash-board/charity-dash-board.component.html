@@ -31,7 +31,7 @@
 	</div>
   </div>
   
-
+<div *ngIf="charityLogs!=undefined">
 <h5 class="w3-black w3-padding">Donation Logs:</h5>
 <!-- Food Requirement Log-->
 <div class="w3-container w3-padding" style="margin: 10px">
@@ -85,6 +85,8 @@
           </table>
       </div>
     </div>
+</div>
+
 
     <!--Modal Code-->
     <div class="modal fade" id="statusModal">

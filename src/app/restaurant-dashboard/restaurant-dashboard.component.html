@@ -1,30 +1,52 @@
-
+<div class="w3-bar" style="margin-top: 80px;"></div>
 <div class="w3-bar">
   <div class="w3-bar-item w3-right">
-    <img routerLink="/ResturantProfile" src="../../assets/img/pencil-edit-button.png" height="50px" />
+    <img routerLink="/ProfileEditable" src="../../assets/img/pencil-edit-button.png" height="50px" />
   </div>
-  <div class="w3-bar-item w3-right ">
-    <img (click)="openDonationModal()" src="../../assets/img/donation1.png" height="50px" />
-  </div>
-</div>
 <div class="w3-bar" style="margin-bottom: 2%;">
 </div>
+
 
 <div class="w3-container">
   <div class="row">
     <div class="col-md-4">
-      <app-availabilityform></app-availabilityform>
-    </div>
+        <div class="container p-3">
+            <div class="card">
+              <div class="card-header">
+              <h2>Donation</h2>
+              </div>
+              <div class="card-body">
+              <table class="m-auto">
+              <tr>
+              <th>Vag Availability</th>
+              <td><input type="number" class="form-control form-control-lg rounded-0" name="veg" [(ngModel)]="veg"></td>
+              </tr>
+              <tr>
+              <th>Non-Veg Availability</th>
+              <td><input type="number" class="form-control form-control-lg rounded-0" name="nonveg" [(ngModel)]="nonveg"></td>
+              </tr>
+              <tr>
+              <th>Total Availability</th>
+              <td><h5><label >{{ veg+nonveg }}</label></h5></td>
+              </tr>
+              <tr>
+              <th></th>
+              <td><button type="submit" class="btn btn-success btn-lg" (click)="updateRestaurantActivity()">Submit</button></td>
+              </tr>
+              </table>
+              </div>
+            </div>
+          </div>
+                 
+    </div> 
     <div class="col-md-4">
-      <h3>{{restaurant.restaurantName}}</h3>
       <h5>
-        <label>{{restaurant.mobile}}</label><br/>
+        <label>{{restaurant.username}}</label><br/>
         <label>{{restaurant.email}}</label><br/>
       </h5>
       <h5>Address:</h5>
       <p>
         {{restaurant.address}}
-        {{a}}
       </p>
     </div>
     <div class="col-md-4">
@@ -34,12 +56,14 @@
   </div>
 </div>
 
+
 <div class="w3-bar">
   <div class="w3-bar-item w3-right">
     <button style="margin-right: 20px;" data-toggle="modal" href="#statusModal" (click)="fetchStatus()" class="btn btn-primary btn-md">Status</button>
   </div>
 </div>
 
+<div *ngIf="restaurantLogs!=undefined">
 <h5 class="w3-black w3-padding">Donation Logs:</h5>
 <!-- Food Requirement Log-->
 <div class="w3-container w3-padding" style="margin: 10px">
@@ -89,41 +113,7 @@
           </table>
       </div>
     </div>
-<!-- Resturant Donation Modal -->
-<div class="w3-modal" id="donationModal">
-  <div class="w3-modal-contant">
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <h5 class="w3-padding w3-black">Donation<span (click)="closeDonationModal()" class="w3-text-red w3-right">&times;</span></h5>
-        <div class="w3-container w3-padding w3-white " style="margin-top: -10px">
-          <form #updateDetailsForm="ngForm">
-            <table class="w3-table-all">
-                <tr>
-                  <th>Total Availability</th>
-                  <td><input type="number" [(ngModel)]="foodAvailability" name="resturantName" placeholder="Enter Total Availability..." class="w3-input">
-                  </td>
-                </tr>
-                <tr>
-                  <th>Veg Availability</th>
-                  <td><input type="number" name="resturantName" placeholder="Enter Veg Amount..." class="w3-input"></td>
-                </tr>
-                <tr>
-                  <th>Non-Veg Availability</th>
-                  <td><input type="number" name="resturantName" placeholder="Enter Non-Veg Amount..." class="w3-input"></td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <td><button class="w3-btn w3-yellow w3-small w3-round" (click)="updateRestaurantDetails()">Update</button></td>
-                </tr>
-              </table>
-              </form>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<!--End Of Resturant Donation Modal-->
 
 
 <!--Modal Code-->

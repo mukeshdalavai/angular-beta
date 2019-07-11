@@ -51,6 +51,7 @@
   </div>
 </div>
 
+<div *ngIf="deliveryBoyLogs!=undefined">
 <div class="w3-container w3-padding-16">
   <h5 class="w3-black w3-padding">Delivery Log:</h5>
   <div class="w3-card-4 w3-padding " style="margin-top: -10px" >
@@ -151,52 +152,4 @@
       <!-- End Of Assignment Log -->
   </div>
 </div>
-
-<!-- {{deliveryBoy.deliveryBoyName}}
-
-<div class="modal fade" id="routeModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    
-  
-      <div class="modal-header">
-        <h3 class="modal-title">Route</h3>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      
-      
-      <div class="modal-body">
-        <h3>Restaurants</h3>
-    <table class="table table-striped">
-      <tbody>
-        <tr *ngFor="let restaurant of deliveryRoute.logs.restaurants">
-        <td>Restaurant Name</td>
-        <td>{{restaurant.restaurantName}}</td>
-        <td>Location</td>
-        <td>{{restaurant.location}}</td>
-        </tr>
-      </tbody>
-    </table>
-    <h3>Charities</h3>
-    <table class="table table-striped">
-      <tbody>
-        <tr *ngFor="let charity of deliveryRoute.logs.charities">
-        <td>Charity Name</td>
-        <td>{{charity.charityName}}</td>
-        <td>Charity Location</td>
-        <td>{{charity.location}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-      </div>
-      
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-      
-    </div>
-  </div>
 </div>
- -->

@@ -36,6 +36,24 @@ saveDeliveryBoy(deliveryBoy){
   console.log("Saving DeliveryBoy", deliveryBoy);
   return this.http.post<any>(saveDeliveryBoyUrl,deliveryBoy);
  }
+
+ updateRestaurantProfile(restaurant){
+  var updateRestaurantUrl= "http://localhost:8080/api/v1/restaurant-profile/";
+  console.log("Updating Restaurant Profile", restaurant);
+  return this.http.put<any>(updateRestaurantUrl,restaurant);
+}
+
+updateCharityProfile(charity){
+  var updateCharityUrl= "http://localhost:8080/api/v1/charity-profile/";
+  console.log("Updating Charity Profile", charity);
+  return this.http.put<any>(updateCharityUrl,charity);
+}
+
+updateDeliveryboyProfile(deliveryBoy){
+  var updateDeliveryBoyUrl= "http://localhost:8080/api/v1/deliveryBoy-profile/";
+  console.log("Updating DeliveryBoy Profile", deliveryBoy);
+  return this.http.put<any>(updateDeliveryBoyUrl,deliveryBoy);
+}
  
  fetchRestaurantProfile(username){
   var url= `http://localhost:8080/api/v1/restaurant-profile/?username=${username}`;
@@ -55,9 +73,9 @@ saveDeliveryBoy(deliveryBoy){
   return this.http.get<any>(url);
  }
  
- updateRestaurantDetails(details){
+ updateRestaurantActivity(details){
  
-  var url= "http://localhost:8060/updateRestaurantDetails";
+  var url= "http://localhost:8050/updateRestaurantDetails";
   // var header = new HttpHeaders();
   // header.append("Content-Type","application/json");
   console.log("Updating Restaurant Details With Username : ", details.restaurantId , " And Food Availability : " , details.foodAvailability);
